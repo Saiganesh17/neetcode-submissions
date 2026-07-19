@@ -1,0 +1,11 @@
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        prev_prev, prev=0,1
+        for _ in range(n):
+            prev_prev, prev=prev, prev_prev+ prev
+        return prev
+        #Time and space complexity is O(n ) and O( 1) respectively
+        #pitfall1: Off by one error in base cases
+        #pitfall2: Incorrect loop count
+        #pitfall3: Misunderstanding the variable update  order
+        
